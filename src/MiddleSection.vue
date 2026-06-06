@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CountDown, TimeRemaining } from './composable/CountDown';
+import { CountDown, TimeRemaining } from './composable/CountDown.js';
 import { Carousel, Slide } from 'vue3-carousel'
 import { ref, onMounted, onUnmounted } from 'vue'
 
@@ -9,13 +9,13 @@ const handleRsvpClick = () => {
     emit('trigger-rsvp')
 }
 
-const imagesFetched = [
-    'A6R_0922-1-e1679641965667-1600x900.webp',
-    'art-gallery-event-stockcake.jpg',
-    'OIP.webp',
-    'Various-artists-Pinta-Miami-2023-exhibition-view-Courtesy-of-Pinta-Miami-2023.jpg'
+const imagesFetched: string[] = [
+    'https://laportadiroma.com/events/spf-and-styles/assets/images/show/1.webp',
+    'https://laportadiroma.com/events/spf-and-styles/assets/images/show/2.jpg',
+    'https://laportadiroma.com/events/spf-and-styles/assets/images/show/3.webp',
+    'https://laportadiroma.com/events/spf-and-styles/assets/images/show/4.jpg'
 ];
-const images_slideshow = ref(imagesFetched.map((filename: string) => `https://laportadiroma.com/events/spf-and-styles/assets/images/show/${filename}`))
+const images_slideshow = ref(imagesFetched)
 
 
 const props = defineProps({
@@ -132,7 +132,8 @@ onUnmounted(() => {
             :infinite-scroll="true" transition-easing="linear">
             <Slide v-for="(img, slide) in images_slideshow" :key="slide" class="carousel-slide-wrapper">
                 <div class="carousel__item_card">
-                    <img class="carousel-marquee-img" :src="img" alt="Event Sponsor">
+                    <img class="carousel-marquee-img" :src="img" alt="Event Sponsor" loading="lazy">
+                    <!-- {{ console.log('Rendering slide with image: ', img) }}  -->
                 </div>
             </Slide>
         </Carousel>
@@ -140,7 +141,7 @@ onUnmounted(() => {
 </template>
 
 
-<style>
+<style scoped>
 :deep(.carousel__track) {
     transition-timing-function: linear !important;
 }

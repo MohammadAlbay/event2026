@@ -11,9 +11,11 @@
         <div class="top-section-image-container">
 
             <img class="top-section-image-stamp left"
-                src="https://laportadiroma.com/events/spf-and-styles/assets/renew-logo-kOAqBqHq.jpg" alt="">
+                src="https://laportadiroma.com/events/spf-and-styles/assets/images/renew-logo.jpg" loading="eager"
+                alt="">
             <img class="top-section-image-stamp right"
-                src="https://laportadiroma.com/events/spf-and-styles/assets/lpdr - logo-Bwsvy8AD.jpg" alt="">
+                src="https://laportadiroma.com/events/spf-and-styles/assets/images/lpdr - logo.jpg" loading="eager"
+                alt="">
         </div>
 
         <div class="top-section-title-container">

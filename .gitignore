@@ -1,0 +1,29 @@
+# Ignore local app entry
+/app.ts
+
+# Ignore image files under src/asset
+src/asset/**/*.{png,jpg,jpeg,gif,webp,svg}
+
+# Common Node and build artifacts
+node_modules/
+dist/
+dist-server/
+/.vite
+/.parcel-cache
+/.turbo
+
+# Environment files
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories
+.vscode/
+.idea/

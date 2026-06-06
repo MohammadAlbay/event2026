@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-const lat = ref(32.8822813)
-const lng = ref(13.2111231)
 
-const embedUrl = computed(() => {
-    return 'src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.5113941400615!2d13.2085482!3d32.8822813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a892f053566da7%3A0x7662e48d832a1731!2sV6J6%2BVFR%2C%20Tarabulus!5e0!3m2!1sen!2sly!4v1717315200000!5m2!1sen!2sly"'
-})
 </script>
 <template>
     <section>
