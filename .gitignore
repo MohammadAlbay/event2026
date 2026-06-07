@@ -27,3 +27,5 @@ yarn-error.log*
 # Editor directories
 .vscode/
 .idea/
+app.ts
+app.js
