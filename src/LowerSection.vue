@@ -105,7 +105,7 @@
     text-align: center;
     background-color: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -114,6 +114,7 @@
     flex-direction: column;
     align-items: left;
     gap: 0.4rem;
+    margin-left: 4em;
 }
 
 .credit-prefix {
@@ -124,9 +125,6 @@
     letter-spacing: 0.2em;
     color: #d4b151;
     line-height: 20px;
-    align-items: left;
-
-    /* Subtle matching tone */
 }
 
 .credit-link {

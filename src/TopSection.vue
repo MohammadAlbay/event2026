@@ -4,9 +4,9 @@
 <template>
     <section>
         <div class="top-event-tagline">
-            <span style="font-size: 0.7rem; color:black;margin-top: 5rem;">An Exclusive Invitation To</span>
+            <span style="font-size: 0.7rem; color:black;margin-top: 9rem;">An Exclusive Invitation To</span>
         </div>
-        <div class="top-section-image-container" style="height: fit-content; margin-top: 5em; margin-bottom: .4em;">
+        <div class="top-section-image-container" style="height: fit-content; margin-top: 6em; margin-bottom: .4em;">
             <img src="/src/assets/images/spf&style log 60x18cm.png"
                 style="width: 70%; padding: 0px; display: block; margin: 0 auto;">
             <!-- <img class="top-section-image-stamp left"

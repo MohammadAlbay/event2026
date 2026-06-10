@@ -68,9 +68,6 @@ onUnmounted(() => {
 
     <section style="margin-bottom: 1em;">
 
-        <img class="event-img" src="https://laportadiroma.com/events/spf-and-styles/assets/images/EXTRA_BOUQETE.svg"
-            alt="" style="display: block; margin: 2em auto 1em auto;">
-
         <div class="top-section-coundown-container">
             <table>
                 <tbody>
@@ -206,7 +203,7 @@ onUnmounted(() => {
 
 <style>
 .event-time-badge {
-    margin: 1rem auto;
+    margin: 0rem auto 0rem auto;
     text-align: center;
     /* border-top: 1px solid #dcd7ca;
     border-bottom: 1px solid #dcd7ca; */
