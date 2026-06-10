@@ -4,26 +4,34 @@
 <template>
     <section>
         <div class="top-event-tagline">
-            <span>An Exclusive Presentation</span>
-            <h2 class="event-main-title">SPF & Style Event</h2>
+            <span style="font-size: 0.7rem; color:black;margin-top: 5rem;">An Exclusive Invitation To</span>
         </div>
-
-        <div class="top-section-image-container">
-
-            <img class="top-section-image-stamp left"
+        <div class="top-section-image-container" style="height: fit-content; margin-top: 5em; margin-bottom: .4em;">
+            <img src="/src/assets/images/spf&style log 60x18cm.png"
+                style="width: 70%; padding: 0px; display: block; margin: 0 auto;">
+            <!-- <img class="top-section-image-stamp left"
                 src="https://laportadiroma.com/events/spf-and-styles/assets/images/renew-logo.jpg" loading="eager"
                 alt="">
             <img class="top-section-image-stamp right"
                 src="https://laportadiroma.com/events/spf-and-styles/assets/images/lpdr - logo.jpg" loading="eager"
-                alt="">
+                alt=""> -->
+        </div>
+        <div class="top-event-tagline" style="margin-top: 0.0rem;">
+            <h2 class="event-main-title" style="font-size: 10.5pt; margin-top: .0em!important;">Your Summer Just Got An
+                Upgrade
+            </h2>
         </div>
 
         <div class="top-section-title-container">
-            <span class="brand-sub-label">Joint Exclusive Event</span>
             <h1 class="brand-heading">
-                La Porta Di Roma <span class="brand-separator">•</span> Renew
+                La Porta Di Roma <br><span class="brand-separator">✘</span><br> Rénew
             </h1>
+            <span class="brand-sub-label">Are Delighted to invite <br> you to our event</span>
         </div>
+
+
+
+
 
 
     </section>
@@ -46,13 +54,15 @@
     letter-spacing: 0.3em;
     color: #8b8577;
     display: block;
-    margin-bottom: 1rem;
+    line-height: 15px;
+    margin-bottom: .3rem;
+    margin-top: 1rem;
 }
 
 .brand-heading {
     font-family: 'Georgia', serif;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     letter-spacing: 0.05em;
     color: #111;
     margin: 0;
@@ -60,7 +70,8 @@
 
 .brand-separator {
     font-size: 1.1rem;
-    color: #bcae97;
+    color: #3d3a36;
+    /* color: #bcae97; */
     vertical-align: middle;
     margin: 0 0.4rem;
 }
@@ -75,7 +86,7 @@
     height: 140px;
     overflow: hidden;
     padding: 0px;
-    margin-top: 1.5em !important;
+    /* margin-top: 1.5em !important; */
 }
 
 .top-section-image-stamp {
@@ -114,7 +125,7 @@
 <style>
 .top-event-tagline {
     text-align: center;
-    margin: 4rem auto 2rem auto;
+    margin: 4rem auto 0rem auto;
     padding: 0 1rem;
 }
 
@@ -125,7 +136,7 @@
     letter-spacing: 0.25em;
     color: #8b8577;
     display: block;
-    margin-bottom: 0.4rem;
+    /* margin-bottom: 0.4rem; */
 }
 
 .event-main-title {

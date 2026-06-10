@@ -10,6 +10,9 @@ const handleRsvpClick = () => {
 }
 
 const imagesFetched: string[] = [
+    'https://laportadiroma.com/events/spf-and-styles/assets/images/show/infinity.png',
+    'https://laportadiroma.com/events/spf-and-styles/assets/images/show/PHOTO-2026-06-04-13-18-05.jpg',
+    'https://laportadiroma.com/events/spf-and-styles/assets/images/show/qissa.png',
     'https://laportadiroma.com/events/spf-and-styles/assets/images/show/1.webp',
     'https://laportadiroma.com/events/spf-and-styles/assets/images/show/2.jpg',
     'https://laportadiroma.com/events/spf-and-styles/assets/images/show/3.webp',
@@ -63,7 +66,11 @@ onUnmounted(() => {
 
 <template>
 
-    <section>
+    <section style="margin-bottom: 1em;">
+
+        <img class="event-img" src="https://laportadiroma.com/events/spf-and-styles/assets/images/EXTRA_BOUQETE.svg"
+            alt="" style="display: block; margin: 2em auto 1em auto;">
+
         <div class="top-section-coundown-container">
             <table>
                 <tbody>
@@ -96,25 +103,40 @@ onUnmounted(() => {
                 </tbody>
             </table>
 
-            <div class="event-time-badge">
-                <p class="event-date">Thursday, June 4, 2026</p>
-                <p class="event-time">07:30 PM</p>
-            </div>
+
 
         </div>
     </section>
 
     <section>
+        <div class="top-section-coundown-container" style="margin-top: 1.5em;">
+            <img class="event-img" src="https://laportadiroma.com/events/spf-and-styles/assets/images/DATE.svg" alt=""
+                style="width: 55px;">
+            <div class="event-time-badge" style="border-top: none;">
+                <p class="event-date">Sunday, June 21, 2026</p>
+                <p class="event-time">04:30 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <div class="event-details-group">
-            <div class="venue-badge">
-                <span class="venue-label">Location</span>
-                <h3 class="venue-title">La Porta Di Roma Showroom</h3>
+            <div class="venue-badge" style="margin-top: 1em;">
+                <img class="event-img" src="https://laportadiroma.com/events/spf-and-styles/assets/images/LOCATION.svg"
+                    alt="" style="width: 55px; margin-bottom: 1.5em;">
+                <span class="venue-label">Venue</span>
+                <h3 class="venue-title">La Villa</h3>
                 <p class="venue-city">Tripoli, Libya</p>
             </div>
-
+            <div class="event-time-badge" style="border-bottom:none">
+                <img class="event-img" style="margin-top: 1em; margin-bottom: 1.5em;"
+                    src="https://laportadiroma.com/events/spf-and-styles/assets/images/DRESS_CODE.svg" alt="">
+                <p class="event-date">Dress code</p>
+                <p class="event-time">Your Most Summer Self</p>
+            </div>
             <div class="cta-container">
                 <button class="rsvp-button" @click="handleRsvpClick">
-                    <span>Reserve Your Seat</span>
+                    <span>Confirmed Attendance</span>
                     <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -126,7 +148,7 @@ onUnmounted(() => {
     </section>
 
     <section style=" margin:0 auto; margin-top: 3em; width: 100%; text-align: center;">
-        <h3>Join Our Event</h3>
+        <h3>An Evening Together</h3>
         <Carousel :autoplay="1" :transition="3000" :wrap-around="true" :items-to-show="2.2"
             :mouse-drag="{ threshold: 0.5 }" :touch-drag="false" :snap-align="'end'" :pause-autoplay-on-hover="true"
             :infinite-scroll="true" transition-easing="linear">
@@ -184,7 +206,7 @@ onUnmounted(() => {
 
 <style>
 .event-time-badge {
-    margin: 2.5rem auto;
+    margin: 1rem auto;
     text-align: center;
     /* border-top: 1px solid #dcd7ca;
     border-bottom: 1px solid #dcd7ca; */
@@ -194,16 +216,26 @@ onUnmounted(() => {
     max-width: 280px;
 }
 
+.event-img,
+.event-location {
+    width: 20%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    /* max-width: 50px; */
+}
+
 .event-date {
     font-family: 'Georgia', serif;
-    font-size: 1.15rem;
+    /* font-size: 1.15rem; */
+    font-size: 1.35rem;
     font-style: italic;
     margin: 0;
     color: #333;
 }
 
 .event-time {
-    font-size: 0.85rem;
+    /* font-size: 0.85rem; */
+    font-size: 0.95rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin: 0.3rem 0 0 0;
@@ -242,7 +274,7 @@ onUnmounted(() => {
 }
 
 .countdown-value {
-    font-size: 2.2rem;
+    font-size: 2rem;
     /* Make the numbers prominent and elegant */
     font-family: 'Georgia', serif;
     font-weight: 300;
@@ -251,7 +283,7 @@ onUnmounted(() => {
 }
 
 .countdown-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #666;
@@ -285,11 +317,12 @@ onUnmounted(() => {
     /* background-color: rgb(9, 8, 8); */
     margin: 0 auto;
     border-radius: 2em;
-    padding: 1em 0.5em;
+    /* padding: 1em 0.5em; */
     text-align: center;
     font-size: 1em;
     font-weight: bold;
-    margin-top: 5em;
+    margin-top: 1em;
+    /* margin-top: 5em; */
     font-family: 'Arial', sans-serif;
     font-style: normal;
     font-weight: 200;
@@ -308,19 +341,19 @@ onUnmounted(() => {
 
 <style>
 .event-details-group {
-    margin-top: 3rem;
+    margin-top: .0rem;
     margin-bottom: 4rem;
     text-align: center;
 }
 
 .venue-badge {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     font-family: 'Arial', sans-serif;
 }
 
 .venue-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    font-size: 1rem;
+    /* text-transform: uppercase; */
     letter-spacing: 0.2em;
     color: #78778b;
     /* color: #8b8577; */
@@ -337,7 +370,7 @@ onUnmounted(() => {
 }
 
 .venue-city {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #666;
     margin: 0;
     letter-spacing: 0.05em;
@@ -348,16 +381,18 @@ onUnmounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: #b922b2; */
 }
 
 .rsvp-button {
-    background-color: #111;
+    background-color: rgb(235, 47, 115);
+    /* background-color: #111; */
     color: #fff;
     border: none;
     padding: 1rem 2.5rem;
     font-family: 'Arial', sans-serif;
     font-size: 0.85rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 0.25em;
     font-weight: bold;
     border-radius: 4px;

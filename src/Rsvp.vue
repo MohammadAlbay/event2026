@@ -35,10 +35,9 @@ watch(() => props.show, (newVal) => {
                 <button class="modal-close-btn" @click="emitClose" aria-label="Close modal">&times;</button>
 
                 <div class="modal-header">
-                    <span class="modal-sub-label">R.S.V.P.</span>
-                    <h2 class="modal-title">Request An Invitation</h2>
-                    <p class="modal-description">Please enter your details below to secure your seat for this exclusive
-                        joint event.</p>
+                    <!-- <span class="modal-sub-label">R.S.V.P.</span> -->
+                    <h2 class="modal-title">Join An Exclusive Evening</h2>
+                    <p class="modal-description">Your Presence means everything. Share your details to confirm.</p>
                 </div>
 
                 <form class="rsvp-form" @submit.prevent="handleRSVPSubmit">
@@ -48,16 +47,17 @@ watch(() => props.show, (newVal) => {
                     </div>
 
                     <div class="form-group">
-                        <input type="email" id="email" required placeholder=" " class="luxury-input" />
-                        <label for="email" class="luxury-label">Email Address</label>
+                        <input type="tel" id="phoneno" required placeholder=" " class="luxury-input" />
+                        <label for="phoneno" class="luxury-label">Phone Number</label>
                     </div>
 
                     <div class="form-group">
                         <select id="guests" class="luxury-input luxury-select">
-                            <option value="1">Attending Alone (1)</option>
-                            <option value="2">With a Guest (2)</option>
+                            <option value="null" selected disabled>Pick Option</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
                         </select>
-                        <label for="guests" class="luxury-label">Attendance</label>
+                        <label for="guests" class="luxury-label">Do you have any seafood allegries?</label>
                     </div>
 
                     <div class="modal-action">
@@ -95,7 +95,8 @@ watch(() => props.show, (newVal) => {
 
 /* --- 2. The Premium Invitation Card --- */
 .rsvp-modal-card {
-    background-color: #f4ede1;
+    /* background-color: #f4ede1; */
+    background-color: rgba(197, 122, 9, 0.3);
     /* Reuses your exact premium background tone */
     max-width: 450px;
     width: 90%;
@@ -147,16 +148,18 @@ watch(() => props.show, (newVal) => {
 .modal-title {
     font-family: 'Georgia', serif;
     font-weight: 300;
-    font-size: 1.75rem;
-    color: #111;
+    font-size: 1.8rem;
+    color: #ffffff;
+    /* color: #111; */
     margin: 0 0 0.8rem 0;
 }
 
 .modal-description {
     font-family: 'Arial', sans-serif;
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.5;
-    color: #666;
+    color: #f3f3f3;
+    /* color: #666; */
     margin: 0;
 }
 
@@ -186,7 +189,8 @@ watch(() => props.show, (newVal) => {
     padding: 0.6rem 0;
     font-family: 'Georgia', serif;
     font-size: 1.1rem;
-    color: #111;
+    color: #e3e3e3;
+    /* color: #111; */
     outline: none;
     border-radius: 0 !important;
     box-sizing: border-box;
@@ -194,7 +198,8 @@ watch(() => props.show, (newVal) => {
 }
 
 .luxury-input:focus {
-    border-bottom: 1px solid #111 !important;
+    border-bottom: 1px solid rgba(244, 108, 69, .5) !important;
+    /* border-bottom: 1px solid #111 !important; */
 }
 
 /* Clean Custom Arrow Wrapper for Selection Dropdown */
@@ -206,6 +211,7 @@ watch(() => props.show, (newVal) => {
     background-repeat: no-repeat;
     background-position: right cubic-bezier(0.25, 1, 0.5, 1) center;
     padding-right: 1.5rem;
+    font-size: 11pt;
 }
 
 /* The Label Styling */
@@ -214,13 +220,15 @@ watch(() => props.show, (newVal) => {
     font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #8b8577;
+    color: #f1f1f1;
+    /* color: #8b8577; */
     margin-bottom: 0.4rem;
     transition: color 0.3s ease;
 }
 
 .luxury-input:focus~.luxury-label {
-    color: #111;
+    /* color: #111; */
+    color: white;
 }
 
 /* --- 5. Premium Dark Solid Submit Action --- */
@@ -229,7 +237,9 @@ watch(() => props.show, (newVal) => {
 }
 
 .rsvp-submit-button {
-    background-color: #111;
+    background-color: rgb(244, 108, 69);
+    /* background-color: rgb(235, 47, 115); */
+    /* background-color: #111; */
     color: #fff;
     border: none;
     width: 100%;
